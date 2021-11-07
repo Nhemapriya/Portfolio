@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.e94beaeb.chunk.css",
+    "main.js": "/Portfolio/static/js/main.18b1e5c0.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.18b1e5c0.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.ae2dea17.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.ae2dea17.js.map",
+    "static/js/2.03d79832.chunk.js": "/Portfolio/static/js/2.03d79832.chunk.js",
+    "static/js/2.03d79832.chunk.js.map": "/Portfolio/static/js/2.03d79832.chunk.js.map",
+    "index.html": "/Portfolio/index.html",
+    "static/css/main.e94beaeb.chunk.css.map": "/Portfolio/static/css/main.e94beaeb.chunk.css.map",
+    "static/js/2.03d79832.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.03d79832.chunk.js.LICENSE.txt",
+    "static/media/contact.edd5be4f.jpg": "/Portfolio/static/media/contact.edd5be4f.jpg",
+    "static/media/elite.331638f6.JPG": "/Portfolio/static/media/elite.331638f6.JPG",
+    "static/media/email.a49e0158.png": "/Portfolio/static/media/email.a49e0158.png",
+    "static/media/fin1.af736d8d.JPG": "/Portfolio/static/media/fin1.af736d8d.JPG",
+    "static/media/ieee.35092b94.JPG": "/Portfolio/static/media/ieee.35092b94.JPG",
+    "static/media/kraft.7480e175.JPG": "/Portfolio/static/media/kraft.7480e175.JPG",
+    "static/media/lilavati.ed8ba147.jpg": "/Portfolio/static/media/lilavati.ed8ba147.jpg",
+    "static/media/math.f8edaa09.JPG": "/Portfolio/static/media/math.f8edaa09.JPG",
+    "static/media/me.fc6d86d5.jpeg": "/Portfolio/static/media/me.fc6d86d5.jpeg",
+    "static/media/moon.3bea3d39.png": "/Portfolio/static/media/moon.3bea3d39.png",
+    "static/media/patrec.9927cd56.JPG": "/Portfolio/static/media/patrec.9927cd56.JPG",
+    "static/media/seed.b2a8a22e.JPG": "/Portfolio/static/media/seed.b2a8a22e.JPG",
+    "static/media/skill1.58ff5ff1.jpeg": "/Portfolio/static/media/skill1.58ff5ff1.jpeg",
+    "static/media/skill2.c0323ba7.jpeg": "/Portfolio/static/media/skill2.c0323ba7.jpeg",
+    "static/media/skill3.0aa48846.JPG": "/Portfolio/static/media/skill3.0aa48846.JPG",
+    "static/media/study.c52df2b4.JPG": "/Portfolio/static/media/study.c52df2b4.JPG",
+    "static/media/sun.f794832a.png": "/Portfolio/static/media/sun.f794832a.png",
+    "static/media/wyc.66ed3cf6.JPG": "/Portfolio/static/media/wyc.66ed3cf6.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae2dea17.js",
+    "static/js/2.03d79832.chunk.js",
+    "static/css/main.e94beaeb.chunk.css",
+    "static/js/main.18b1e5c0.chunk.js"
+  ]
+}
