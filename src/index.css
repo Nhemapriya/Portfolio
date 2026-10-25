@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: toggled by adding `.dark` to <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand accent ramp (indigo → violet → cyan) */
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-violet-400: #c084fc;
+  --color-violet-500: #a855f7;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+
+  /* Surfaces */
+  --color-ink: #0b0b12;
+  --color-ink-soft: #15151f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto; /* Lenis drives smooth scrolling */
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8f8fb;
+    color: #1a1a24;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    background-color: var(--color-ink);
+    color: #d7d8e0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-brand-500) 40%, transparent);
+  }
+
+  /* Honour reduced-motion for anything CSS-driven */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-brand-400),
+    var(--color-violet-500) 45%,
+    var(--color-accent-400)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass card surface */
+.glass {
+  background: color-mix(in srgb, white 70%, transparent);
+  border: 1px solid color-mix(in srgb, #1a1a24 10%, transparent);
+  backdrop-filter: blur(12px);
+}
+.dark .glass {
+  background: color-mix(in srgb, var(--color-ink-soft) 65%, transparent);
+  border: 1px solid color-mix(in srgb, white 8%, transparent);
+}
+
+/* Decorative aurora background */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+.aurora::before {
+  top: -15vw;
+  left: -10vw;
+  background: radial-gradient(circle, var(--color-brand-500), transparent 70%);
+}
+.aurora::after {
+  bottom: -20vw;
+  right: -10vw;
+  background: radial-gradient(circle, var(--color-accent-500), transparent 70%);
+}
+.dark .aurora::before,
+.dark .aurora::after {
+  opacity: 0.25;
+}
+
+/* Subtle dotted grid overlay */
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+    color-mix(in srgb, #1a1a24 9%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.dark .grid-overlay {
+  background-image: radial-gradient(
+    color-mix(in srgb, white 7%, transparent) 1px,
+    transparent 1px
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-brand-500) 55%, transparent);
+  border-radius: 9999px;
+}
