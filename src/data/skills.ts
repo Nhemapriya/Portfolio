@@ -1,13 +1,16 @@
 // Content lives in content/skills.md. The "icon" field picks one of these.
 import {
+  ArrowRightLeft,
   Brain,
   Cloud,
   Code2,
   Database,
   FlaskConical,
+  Layers,
   Mic,
   Sparkles,
   Users,
+  Workflow,
 } from "lucide-react";
 import content from "virtual:content";
 
@@ -20,6 +23,9 @@ const icons = {
   mic: Mic,
   sparkles: Sparkles,
   users: Users,
+  workflow: Workflow,
+  layers: Layers,
+  migrate: ArrowRightLeft,
 };
 
 export type SkillGroup = {

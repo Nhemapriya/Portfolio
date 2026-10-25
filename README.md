@@ -35,14 +35,13 @@ for the format and examples.
 | `content/experience.md`  | Work experience                                  |
 | `content/projects.md`    | Projects grid                                    |
 | `content/skills.md`      | Skill groups                                     |
-| `content/awards.md`      | Awards & honours                                 |
-| `content/community.md`   | Community contributions                          |
+| `content/talks.md`       | Community & Talks page (talks, events, volunteering) |
 
 `scripts/content-plugin.ts` parses these at build time, so a malformed file
 fails the build with the file and entry name instead of breaking the live site.
 `CLAUDE.md` tells AI coding agents how to make content updates the same way.
 
-The Experience and Community sections auto-hide when their files have no entries.
+The Experience section auto-hides when its file has no entries.
 
 ## Deploy (GitHub Pages)
 

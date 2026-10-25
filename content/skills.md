@@ -1,42 +1,91 @@
 # Skills
-<!-- Each "## " is a skill group. icon: brain, code, flask, database, cloud, sparkles, mic, users. -->
+<!-- Each "## " is a skill group. icon: brain, code, flask, database, cloud, sparkles, workflow, layers, migrate, mic, users. -->
 
-## ML / DL
+## Databricks Platform
+icon: layers
+blurb: Lakehouse, Governance & BI
+
+- Unity Catalog
+- AI/BI Dashboards
+- Genie
+- Metric Views
+- Lakeflow Pipelines
+- Auto Loader
+- Databricks Asset Bundles
+- Model Serving
+
+## Data Engineering
+icon: workflow
+blurb: Pipelines, Modelling & Orchestration
+
+- Medallion Architecture
+- Dimensional Modelling
+- Spark
+- Kafka
+- Hadoop
+- Azure Data Factory
+- Azure Synapse
+- Informatica Cloud (IICS)
+- Talend
+- Microsoft Fabric
+- Apache Airflow
+- dbt
+
+## Migration
+icon: migrate
+blurb: Platform & BI Modernisation
+
+- Tableau to AI/BI
+- Power BI to AI/BI
+- Hive Metastore to Unity Catalog
+- UCX
+- Legacy ML Model Migration
+- SQL Server to Snowflake
+
+## Machine Learning & GenAI
 icon: brain
-blurb: Libraries & algorithms
+blurb: MLOps, LLMs & Agents
 
+- MLflow
+- MLOps
+- Mosaic AI Agent Framework
+- Vector Search
+- Foundation Model APIs
+- RAG
+- LLMs
+- AI Agents
+- PySpark ML
 - TensorFlow
-- Keras
-- Explanatory algorithms
-- Clustering & similarity
-- Object detection
-- GANs
-- Medical imaging
+- Transformers
+- NLP
 
-## Web Development
+## Cloud & Infrastructure
+icon: cloud
+blurb: Deployment, Networking & DevOps
+
+- AWS
+- Azure
+- GCP
+- Terraform
+- PrivateLink
+- Private Service Connect
+- VPC Service Controls
+- SSO & IAM
+- CI/CD
+- Azure DevOps
+- Git
+
+## Languages & Databases
 icon: code
-blurb: Full-stack tooling
+blurb: Programming & Data Stores
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Node.js
-- Express
-- Angular (basics)
-- MongoDB
-- SQL
-- SEO
-
-## Programming & Research
-icon: flask
-blurb: Fundamentals & writing
-
-- C
 - Python
+- PySpark
+- SQL
 - Java
-- Networks
-- DBMS
-- Research papers
-- Journals
-- Tech articles
+- JavaScript
+- Amazon Redshift
+- SQL Server
+- MongoDB
+- MySQL
+- Firebase

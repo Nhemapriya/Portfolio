@@ -1,41 +1,20 @@
 # Projects
-<!-- Each "## " is a project. image = a file in content/images/. tags are comma-separated. link is optional. -->
+<!-- Each "## " is a project. image (optional) = a file in content/images/; without one a code-style tile is shown. tags are comma-separated. link is optional. -->
 
-## Math-O-Mania
-image: math.JPG
-link: https://nhemapriya.github.io/Math-O-Mania/
-tags: TensorFlow.js, ML, MNIST, Web
+## Databricks on GCP: Terraform Implementation
+link: https://github.com/databricks-solutions/technical-services-solutions/tree/main/workspace-setup/terraform-examples/gcp
+tags: Terraform, GCP, Databricks, Private Service Connect, Networking
 
-A TensorFlow-based website that loads an ML model trained on the MNIST handwritten digits to do live math calculation from your handwriting.
+Reusable Terraform templates for deploying Databricks workspaces on GCP across three network patterns: Shared VPC, single (standalone) VPC and Private Service Connect.
 
-## Elite Doctors Consultancy
-image: elite.JPG
-link: https://elitedoctorsconsultancy-3291a.web.app/
-tags: Node.js, Express, Bootstrap, Firebase
+## whytrace
+link: https://github.com/Nhemapriya/whytrace
+tags: Python, Developer Tools, Debugging, Open Source
 
-A consultancy platform that helps students study medicine abroad. Frontend in HTML/CSS/Bootstrap/JS with a Node.js + Express backend.
+An open-source Python library that explains why a function took a particular control-flow path: a single @why decorator evaluates if, elif and else conditions, including short-circuited and/or logic, steps through loops with per-iteration state, and renders a colour-coded decision tree in the console with Rich.
 
-## StudyChain
-image: study.JPG
-link: https://studychain.azurewebsites.net/
-tags: Full-stack, Azure, EdTech
+## statecrumbs
+link: https://github.com/Nhemapriya/statecrumbs
+tags: Python, Observability, Debugging, Open Source
 
-A web-based virtual learning environment where like-minded people share resources and activities and interact within a course structure.
-
-## Patrec
-image: patrec.JPG
-tags: Healthcare, Web, Records
-
-A patient-centric electronic medical health record management system with features such as blogs and insurance.
-
-## KraftoGram
-image: kraft.JPG
-tags: Blockchain, Supply chain, Social
-
-A one-stop platform for artisans to sell handcrafted goods through a blockchain-based supply chain, backed by a social network of fellow artisans.
-
-## Seedchain
-image: seed.JPG
-tags: MERN, MongoDB, Analytics
-
-A MERN application that tracks, monitors and analyses seed quality and stock from farmers.
+A lightweight Python library that records structured runtime breadcrumbs in a bounded, thread-safe buffer with scoped context, and dumps them automatically on unhandled exceptions, giving crash and post-mortem debugging context alongside standard logging.

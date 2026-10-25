@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Personal site rules for agents (kept on this laptop only)
+MEMORY.md

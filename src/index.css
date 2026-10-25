@@ -148,3 +148,23 @@
   background: color-mix(in srgb, var(--color-brand-500) 55%, transparent);
   border-radius: 9999px;
 }
+
+/* Talks highlights carousel: slow continuous scroll, paused on hover/focus. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+.marquee-mask:hover .marquee-track,
+.marquee-mask:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .marquee-mask { overflow-x: auto; }
+}

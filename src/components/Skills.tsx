@@ -5,7 +5,7 @@ import { fadeUp, staggerContainer, viewportOnce } from "../lib/motion";
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="What I work with">
+    <Section id="skills" eyebrow="Skills" title="Technical Expertise">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

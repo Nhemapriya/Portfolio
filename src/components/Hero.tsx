@@ -3,7 +3,9 @@ import { AnimatePresence, motion } from "motion/react";
 import { useLenis } from "lenis/react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { profile } from "../data/profile";
-import { socials } from "../data/socials";
+import { socials, contactEmail } from "../data/socials";
+import { useCopy } from "../lib/useCopy";
+import { resumeUrl } from "../lib/urls";
 import { fadeUp, staggerContainer } from "../lib/motion";
 
 function RotatingRole() {
@@ -34,6 +36,7 @@ function RotatingRole() {
 }
 
 export function Hero() {
+  const { copied, copy } = useCopy();
   const lenis = useLenis();
   const go = (id: string) => {
     if (lenis) lenis.scrollTo(`#${id}`, { offset: -80 });
@@ -51,29 +54,19 @@ export function Hero() {
           initial="hidden"
           animate="show"
         >
-          <motion.p
-            variants={fadeUp}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-1.5 text-sm font-medium text-current/80 dark:border-white/10"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
-            </span>
-            {profile.title}
-          </motion.p>
 
           <motion.h1
             variants={fadeUp}
             className="text-4xl font-bold leading-[1.05] sm:text-6xl"
           >
-            Hi, I'm <span className="text-gradient">{profile.shortName}</span>
+            <span className="text-gradient">{profile.shortName}</span>
           </motion.h1>
 
           <motion.div
             variants={fadeUp}
             className="mt-3 text-2xl font-medium sm:text-3xl"
           >
-            I'm a <RotatingRole />
+            <RotatingRole />
           </motion.div>
 
           <motion.p
@@ -84,21 +77,21 @@ export function Hero() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-            <button
-              onClick={() => go("projects")}
+            <a
+              href={resumeUrl}
               className="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 transition-transform hover:-translate-y-0.5 hover:bg-brand-600"
             >
-              View my work
+              View Resume
               <ArrowUpRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
-            </button>
+            </a>
             <button
               onClick={() => go("contact")}
               className="inline-flex items-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold transition-colors hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/5"
             >
-              Get in touch
+              Get in Touch
             </button>
           </motion.div>
 
@@ -109,7 +102,9 @@ export function Hero() {
                 href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                aria-label={s.label}
+                aria-label={s.label === "Email" ? "Copy email address" : s.label}
+                title={s.label === "Email" ? (copied ? "Email copied" : "Copy email address") : s.label}
+                onClick={s.label === "Email" ? () => copy(contactEmail) : undefined}
                 className="grid h-10 w-10 place-items-center rounded-full border border-black/10 text-current/70 transition-colors hover:border-brand-500 hover:text-brand-500 dark:border-white/10"
               >
                 <s.icon size={18} />
@@ -143,7 +138,7 @@ export function Hero() {
       </div>
 
       <motion.button
-        onClick={() => go("about")}
+        onClick={() => go("experience")}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}

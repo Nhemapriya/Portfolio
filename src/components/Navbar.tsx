@@ -36,6 +36,11 @@ export function Navbar() {
 
   const go = (id: string) => {
     setOpen(false);
+    const href = navLinks.find((l) => l.id === id)?.href;
+    if (href) {
+      window.location.href = href;
+      return;
+    }
     if (lenis) lenis.scrollTo(`#${id}`, { offset: -80 });
     else
       document

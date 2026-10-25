@@ -20,7 +20,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8 ${className}`}
+      className={`relative mx-auto w-full max-w-6xl scroll-mt-24 px-5 py-[78px] sm:px-8 ${className}`}
     >
       {(eyebrow || title) && (
         <motion.div
@@ -28,7 +28,7 @@ export function Section({
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="mb-12"
+          className="mb-[45px]"
         >
           {eyebrow && (
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-brand-500">

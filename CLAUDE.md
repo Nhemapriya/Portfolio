@@ -1,5 +1,9 @@
 # Portfolio — agent instructions
 
+**Read `MEMORY.md` first** (local only, git-ignored, so it may be missing in
+other checkouts). It holds Hemapriya's rules for this site and takes priority
+over everything below.
+
 Personal portfolio site (Vite + React + TypeScript + Tailwind), published to
 GitHub Pages by `.github/workflows/deploy.yml` on every push to `master`.
 
@@ -16,6 +20,9 @@ this project"):
 1. Edit the matching file in `content/`, keeping the existing format and order
    (experience is newest first). Do not hard-code content in `src/`.
 2. For a new image, save it into `content/images/` and reference it by file name.
+   Talk photos are different: each talk has its own folder
+   `content/talks/<year>-<title-slug>/` (create new ones with
+   `npm run talk-folders`) and the build picks the photo up automatically.
    If the user didn't provide an image, ask — don't reuse an unrelated one.
 3. Only use facts the user gave you. Don't invent dates, titles, or links;
    leave them out if unknown (they're optional) and mention it.
